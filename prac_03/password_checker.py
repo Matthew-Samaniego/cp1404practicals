@@ -46,14 +46,12 @@ def is_valid_password(password):
 
     if number_of_lower or number_of_upper or number_of_digit == 0:
         return False
-    else:
-        if IS_SPECIAL_CHARACTER_REQUIRED:
-            for character in password:
-                if character in SPECIAL_CHARACTERS == 0:
-                    return False
-        return True
 
+    if IS_SPECIAL_CHARACTER_REQUIRED:
+        if character in SPECIAL_CHARACTERS == 0:
+            return False
 
+    return True
 main()
 
 
